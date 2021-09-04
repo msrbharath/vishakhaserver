@@ -24,7 +24,7 @@ const contactEmail = nodemailer.createTransport({
       console.log("Ready to Send");
     }
   });
-
+  router.get('/', (req, res) => { res.send('Hello from Vishakha Server!')});
   router.post("/contact", (req, res) => {
     const name = req.body.name;
     const email = req.body.email;
